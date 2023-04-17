@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+<div class="background"></div>
+<div class="form-container">
+    <h1>Registration Form</h1>
+    <form id="registration-form" action="login.html">
+        <label for="username"><span class="required">*</span>Username:</label>
+        <input type="text" id="username" name="username" required>
+        <div id="username-error" class="error"></div>
+
+        <label for="password"><span class="required">*</span>Password:</label>
+        <input type="password" id="password" name="password" required minlength="6" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$">
+        <div id="password-error" class="error"></div>
+
+        <label for="confirm-password"><span class="required">*</span>Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <div id="confirm-password-error" class="error"></div>
+
+        <label for="show-password" class="show-password">
+            <i class="far fa-eye"></i>
+        </label>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
+
+        <input type="submit" value="Register" onclick=redirectToLoginPage()>
+    </form>
+</div>
+
+<script src="register.js"></script>
+<script src="temp.js"></script>
+</body>
+</html>
